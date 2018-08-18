@@ -30,6 +30,7 @@ import android.widget.EditText;
 
 import com.android.settings.R;
 import com.android.settings.carbon.CustomSettingsPreferenceFragment;
+import com.android.settingslib.graph.BatteryMeterDrawableBase;
 
 import java.util.Date;
 
@@ -43,6 +44,8 @@ public class StatusBar extends CustomSettingsPreferenceFragment implements
     private static final String STATUS_BAR_CLOCK_DATE_DISPLAY = "clock_date_display";
     private static final String STATUS_BAR_CLOCK_DATE_STYLE = "clock_date_style";
     private static final String STATUS_BAR_CLOCK_DATE_FORMAT = "clock_date_format";
+    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    private static final String BATTERY_PERCENT = "show_battery_percent";
     private static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     private static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
@@ -54,6 +57,8 @@ public class StatusBar extends CustomSettingsPreferenceFragment implements
     private ListPreference mClockDateDisplay;
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
+    private ListPreference mStatusBarBattery;
+    private ListPreference mBatteryPercentage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -116,6 +121,23 @@ public class StatusBar extends CustomSettingsPreferenceFragment implements
         }
 
         parseClockDateFormats();
+
+        mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
+        int batteryStyle = Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
+        mStatusBarBattery.setValue(String.valueOf(batteryStyle));
+        mStatusBarBattery.setSummary(mStatusBarBattery.getEntry());
+        mStatusBarBattery.setOnPreferenceChangeListener(this);
+
+        mBatteryPercentage = (ListPreference) findPreference(BATTERY_PERCENT);
+        int showPercent = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SHOW_BATTERY_PERCENT, 1);
+        mBatteryPercentage.setValue(Integer.toString(showPercent));
+        int valueIndex = mBatteryPercentage.findIndexOfValue(String.valueOf(showPercent));
+        mBatteryPercentage.setSummary(mBatteryPercentage.getEntries()[valueIndex]);
+        mBatteryPercentage.setOnPreferenceChangeListener(this);
+        boolean hideForcePercentage = batteryStyle == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT;
+        mBatteryPercentage.setEnabled(!hideForcePercentage);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -204,6 +226,22 @@ public class StatusBar extends CustomSettingsPreferenceFragment implements
                         Settings.System.STATUSBAR_CLOCK_DATE_FORMAT, (String) newValue);
                 }
             }
+            return true;
+        } else if (preference == mStatusBarBattery) {
+            int battStyle = Integer.valueOf((String) newValue);
+            int index = mStatusBarBattery.findIndexOfValue((String) newValue);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.STATUS_BAR_BATTERY_STYLE, battStyle);
+            mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
+            boolean hideForcePercentage = battStyle == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT;
+            mBatteryPercentage.setEnabled(!hideForcePercentage);
+            return true;
+        } else  if (preference == mBatteryPercentage) {
+            int showPercent = Integer.valueOf((String) newValue);
+            int index = mBatteryPercentage.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.SHOW_BATTERY_PERCENT, showPercent);
+            mBatteryPercentage.setSummary(mBatteryPercentage.getEntries()[index]);
             return true;
         }
         return false;

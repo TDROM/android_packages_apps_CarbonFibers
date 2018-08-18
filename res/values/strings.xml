@@ -21,6 +21,7 @@
 
     <string name="system_global_actions_category">Global actions</string>
 
+    <string name="status_bar_icons_category">Icons</string>
     <string name="status_bar_clock_category">Clock</string>
 
     <string name="lock_screen_security_category">Security</string>
@@ -93,8 +94,8 @@
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
 
     <!-- SystemUI Tuner -->
-    <string name="status_bar_tuner_title">Status bar items</string>
-    <string name="status_bar_tuner_summary">Edit status bar icons and options</string>
+    <string name="status_bar_tuner_title">Edit icons</string>
+    <string name="status_bar_tuner_summary">Choose which icons to show</string>
     <string name="navbar_tuner_title">Edit navigation bar</string>
     <string name="navbar_tuner_summary">Edit the navigation bar layout and buttons</string>
     <string name="lock_screen_shortcuts_title">Lock screen shortcuts</string>
@@ -176,5 +177,21 @@
     <string name="carbon_gesture_media_previous">Previous media</string>
     <string name="carbon_gesture_customapp">Launch application</string>
     <string name="carbon_gesture_launch">Launch</string>
+
+    <!-- Battery customizations -->
+    <string name="battery_style_category">Battery</string>
+    <string name="battery_style_title">Battery style</string>
+    <string name="battery_style_summary">Change battery icon appearance</string>
+    <string name="battery_style_port">Portrait</string>
+    <string name="battery_style_circle">Circle</string>
+    <string name="battery_style_dotted_circle">Dotted circle</string>
+    <string name="battery_style_solid_circle">Solid circle</string>
+    <string name="battery_style_big_circle">Big circle</string>
+    <string name="battery_style_big_dotted_circle">Big dotted circle</string>
+    <string name="battery_style_text">Text</string>
+    <string name="show_battery_percent_title">Show percentage</string>
+    <string name="battery_percent_none">Do not show</string>
+    <string name="battery_percent_outside">Show beside icon</string>
+    <string name="battery_percent_inside">Show inside icon</string>
 
 </resources>
