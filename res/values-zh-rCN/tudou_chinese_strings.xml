@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 CarbonROM
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="carbonfibers">CarbonFibers</string>
+    <string name="system_category">系统</string>
+    <string name="status_bar_category">状态栏</string>
+    <string name="lock_screen_category">锁屏</string>
+    <string name="buttons_category">按钮</string>
+    <string name="gestures_category">手势</string>
+    <string name="privacy_category">隐私</string>
+
+    <string name="system_global_actions_category">全局操作</string>
+
+    <string name="status_bar_icons_category">图标</string>
+    <string name="status_bar_clock_category">时钟</string>
+
+    <string name="lock_screen_security_category">安全</string>
+
+    <string name="buttons_software_category">软件按钮</string>
+    <string name="buttons_hardware_category">硬件按钮</string>
+
+    <!-- Dialog -->
+    <string name="carbonfibers_dialog_title">帮助我们帮助您!</string>
+    <string name="carbonfibers_dialog_message">不幸的是，我们不是向导！\ n \ n因此，如果您发现CarbonFibers中有任何设置错误，请在Jira上打开一张票，或者通过以下方式联系Carbon开发人员。\ n \ N1。责备kwoktopus \ n2。 Logcat和/或last_kmsg \ n3。内核和mod使用\ n4。有用的信息（主观的）\ n \ n如果您没有报告上述信息，请不要指望修复问题。请记住，我们并不像帕特里克那样完美，所以我们偶尔会错过任何事情.</string>
+    <string name="carbonfibers_dialog_toast">阅读整个过程!</string>
+
+    <!-- Anonymous Statistics #CM -->
+    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">CarbonROM statistics</string>
+    <string name="anonymous_statistics_summary">通过选择匿名统计报告帮助改善CarbonROM</string>
+    <string name="anonymous_statistics_warning_title">关于</string>
+    <string name="anonymous_statistics_warning">选择进入CarbonROM统计数据将允许将非个人数据提交给
+        CarbonROM的开发人员可以跟踪设备上的独特安装。提交的信息包括唯一标识符，
+        这不会影响您的隐私或个人数据。每次启动时都会提交数据。\ n \ n如果要提交的数据示例，请点击预览数据.</string>
+    <string name="enable_reporting_title">启用报告</string>
+    <string name="preview_data_title">预览数据</string>
+    <string name="view_stats_title">查看统计信息</string>
+    <string name="anonymous_learn_more">了解更多</string>
+
+    <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">唯一ID</string>
+    <string name="preview_device_title">设备</string>
+    <string name="preview_version_title">版本</string>
+    <string name="preview_country_title">>国家</string>
+    <string name="preview_carrier_title">Carrier</string>
+    <string name="stats_collection_title">统计集合</string>
+    <string name="stats_collection_summary">启用后，允许度量标准收集</string>
+
+    <!-- Smart Pixels -->
+    <string name="smart_pixels_title">智能像素</string>
+    <string name="smart_pixels_summary">通过关闭额外像素节省电池</string>
+    <string name="smart_pixels_enable_title">启用智能像素</string>
+    <string name="smart_pixels_enable_summary">关闭像素以降低功耗</string>
+    <string name="smart_pixels_on_power_save_title">电池保护程序自动启用</string>
+    <string name="smart_pixels_on_power_save_summary">启用节电功能时启用智能像素</string>
+    <string name="smart_pixels_percent">要禁用的像素百分比</string>
+    <string name="smart_pixels_shift">通过每次移动像素来防止老化</string>
+    <string name="smart_pixels_warning_text">智能像素是省电功能。根据您决定关闭的像素数量，您可以看到电池寿命的显着改善。为了获得良好的用户体验，我们建议将禁用像素数量设置为75％，同时每10分钟移动一次.</string>
+
+    <!-- tap-to-sleep -->
+    <string name="double_tap_status_bar_sleep_title">双击状态栏以休眠</string>
+    <string name="double_tap_status_bar_sleep_summary">点按两次状态栏以暂停</string>
+    <string name="double_tap_lock_sleep_title">双击锁定屏幕以进入睡眠状态</string>
+    <string name="double_tap_lock_sleep_summary">点击锁定屏幕两次以休眠</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_title">电源菜单</string>
+    <string name="global_actions_summary">选择按电源按钮时显示的内容</string>
+    <string name="global_actions_power">Power</string>
+    <string name="global_actions_restart">重新启动</string>
+    <string name="global_actions_airplane">飞行模式</string>
+    <string name="global_actions_settings">设置</string>
+    <string name="global_actions_lockdown">锁定</string>
+    <string name="global_actions_soundpanel">声音面板</string>
+    <string name="global_actions_users">用户</string>
+    <string name="global_actions_screenshot">截图</string>
+    <string name="global_actions_screenrecord">Screenrecord</string>
+    <string name="global_actions_flashlight">手电筒</string>
+    <string name="global_actions_advanced_reboot_title">启用高级重启</string>
+    <string name="global_actions_advanced_reboot_summary">显示恢复和引导加载程序的选项</string>
+
+    <!-- Pin scramble -->
+    <string name="unlock_scramble_pin_layout_title">Scramble PIN layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+
+    <!-- SystemUI Tuner -->
+    <string name="status_bar_tuner_title">编辑图标</string>
+    <string name="status_bar_tuner_summary">选择要显示的图标</string>
+    <string name="navbar_tuner_title">编辑导航栏</string>
+    <string name="navbar_tuner_summary">编辑导航栏布局和按钮</string>
+    <string name="lock_screen_shortcuts_title">锁定屏幕快捷方式</string>
+    <string name="lock_screen_shortcuts_summary">管理锁屏底部快捷方式</string>
+
+    <!-- Volume rocker music control -->
+    <string name="volume_rocker_music_controls_title">屏幕关闭播放控制</string>
+    <string name="volume_rocker_music_controls_summary">按住音量键以在屏幕关闭时搜索音轨</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">屏幕关闭时切换手电筒</string>
+    <string name="torch_power_button_gesture_none">已禁用</string>
+    <string name="torch_power_button_gesture_dt">双击电源按钮（唤醒响应较慢）</string>
+    <string name="torch_power_button_gesture_dt_toast">现在禁用跳转到相机手势</string>
+    <string name="torch_power_button_gesture_lp">按住电源按钮</string>
+
+    <!-- Disable QS on lockscreen -->
+    <string name="block_on_secure_keyguard_title">禁用快速设置</string>
+    <string name="block_on_secure_keyguard_summary">禁用安全锁定屏幕中的快速设置</string>
+
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">快速解锁</string>
+    <string name="unlock_quick_unlock_control_summary">立即解锁正确的PIN /密码输入</string>
+
+    <!-- Status bar clock -->
+    <string name="status_bar_clock">显示时钟</string>
+    <string name="clock_seconds_display">显示秒数</string>
+    <string name="status_bar_clock_style_title">时钟样式</string>
+    <string name="status_bar_clock_style_right">右</string>
+    <string name="status_bar_clock_style_center">中心</string>
+    <string name="status_bar_clock_style_left">左</string>
+    <string name="status_bar_am_pm_title">显示上午/下午</string>
+    <string name="status_bar_am_pm_info">不可用</string>
+    <string name="status_bar_am_pm_hidden">隐藏</string>
+    <string name="status_bar_am_pm_small">小尺寸</string>
+    <string name="status_bar_am_pm_normal">正常大小</string>
+    <string name="clock_date_display">显示日期</string>
+    <string name="clock_date_display_summary">显示自定义日期</string>
+    <string name="clock_date_display_none">隐藏</string>
+    <string name="clock_date_display_small">小尺寸</string>
+    <string name="clock_date_display_normal">正常大小</string>
+    <string name="clock_date_style">日期样式</string>
+    <string name="clock_date_style_normal">正常</string>
+    <string name="clock_date_style_lowercase">小写</string>
+    <string name="clock_date_style_uppercase">大写</string>
+    <string name="clock_date_format_custom">自定义java格式</string>
+    <string name="clock_date_format">日期格式</string>
+    <string name="clock_date_string_edittext_title">格式：MM / DD / YY </string>
+    <string name="clock_date_string_edittext_summary">输入字符串</string>
+
+    <!-- Charging options -->
+    <string name="vibration_on_charge_state_changed_title">插拔/拔出时振动</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">隐藏来自最近的应用</string>
+    <string name="hide_apps_from_recents_summary">防止应用程序出现在最近</string>
+    <string name="hide_from_recents_add_app">添加应用</string>
+    <string name="title_activity_carbon_recents_settings">Recents</string>
+
+    <!-- CarbonGestures -->
+    <string name="carbon_gesture_preference_title">Carbon Gestures</string>
+    <string name="carbon_gestures_summary">配置自定义全局手势</string>
+    <string name="carbon_gestures_fingers_title">用于手势的手指</string>
+    <string name="carbon_gestures_right_title">右手势</string>
+    <string name="carbon_gestures_left_title">左手势</string>
+    <string name="carbon_gestures_up_title">向上手势</string>
+    <string name="carbon_gestures_down_title">向下手势</string>
+    <string name="carbon_gesture_disabled">已禁用</string>
+    <string name="carbon_gesture_back">返回</string>
+    <string name="carbon_gesture_home">主页</string>
+    <string name="carbon_gesture_recents">最近的</string>
+    <string name="carbon_gesture_power">Power</string>
+    <string name="carbon_gesture_volume_down">音量降低</string>
+    <string name="carbon_gesture_volume_up">提高音量</string>
+    <string name="carbon_gesture_volume_mute">音量静音</string>
+    <string name="carbon_gesture_screenshot">截图</string>
+    <string name="carbon_gesture_media_play_pause">播放/暂停媒体</string>
+    <string name="carbon_gesture_media_skip">跳过媒体</string>
+    <string name="carbon_gesture_media_previous">以前的媒体</string>
+    <string name="carbon_gesture_customapp">启动应用程序</string>
+    <string name="carbon_gesture_launch">启动</string>
+
+    <!-- Battery customizations -->
+    <string name="battery_style_category">电池</string>
+    <string name="battery_style_title">电池样式</string>
+    <string name="battery_style_summary">更改电池图标外观</string>
+    <string name="battery_style_port">肖像</string>
+    <string name="battery_style_circle">中心</string>
+    <string name="battery_style_dotted_circle">虚线圆圈</string>
+    <string name="battery_style_solid_circle">实心圆圈</string>
+    <string name="battery_style_big_circle">大圆圈</string>
+    <string name="battery_style_big_dotted_circle">大点圆圈</string>
+    <string name="battery_style_text">文字</string>
+    <string name="show_battery_percent_title">显示百分比</string>
+    <string name="battery_percent_none">不显示</string>
+    <string name="battery_percent_outside">在图标旁边显示</string>
+    <string name="battery_percent_inside">显示在图标内部</string>
+
+</resources>
